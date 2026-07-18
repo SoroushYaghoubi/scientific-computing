@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: GPL-2.0
+#
+# Character device configuration
+#
+
+config STUDENT
+  tristate "Hillo, please turn me on ;)"
+  default n
+  help
+    Please fill in your help! 
+
+config DUMMY_VAL
+  int "Dummy val"
+  default 13
+  depends on STUDENT
+  help
+    Just a number that depends on STUDENT.
+
+config DEBUG_VAL
+	bool "Debug"
+	default n
+	depends on STUDENT
+	help
+		Activates the debug mode.
